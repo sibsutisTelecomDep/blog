@@ -25,8 +25,8 @@ sphinx:
         image_dark: TeachBooks_logo_inverted.svg # Put your logo for the dark mode here (can be the same as image_light)
       repository_url: "https://github.com/user/repo" #add your own repo URL here
       path_to_docs: "book"
-      navbar_end : "/book/_templates/mybutton.html"
       repository_branch: "main"
+      navbar_start: ["book/_templates/mybutton.html"]
       use_edit_page_button: true
       use_repository_button: true
       use_issues_button : true
