@@ -27,7 +27,7 @@ sphinx:
       path_to_docs: "book"
       repository_branch: "main"
       templates_path = ["book/_templates"]
-      navbar_start: ["mybutton.html"]
+      # navbar_start: ["mybutton.html"]
       use_edit_page_button: true
       use_repository_button: true
       use_issues_button : true
