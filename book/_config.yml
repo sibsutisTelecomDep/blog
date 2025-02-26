@@ -32,7 +32,7 @@ sphinx:
       use_issues_button : true
       launch_buttons:
         thebe: true
-      html_sidebars = {
+      html_sidebars : {
       **: "install.md"
       }
     html_show_copyright: false
