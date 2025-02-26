@@ -9,7 +9,6 @@ only_build_toc_files: true
 html:
   favicon : "figures/TB_favicon.ico"
   baseurl :  "https://teachbooks.io/" #Replace this with your own URL
-  home_page_in_navbar: true 
 
 sphinx:
   config:
@@ -19,8 +18,8 @@ sphinx:
       use_thebe_lite: true
       exclude_patterns: ["**/_*.yml", "**/*.md", "**/*.ipynb"]
     html_theme_options:
-      "collapse_navigation": True,
-      "navigation_depth": 2,
+      collapse_navigation: True
+      navigation_depth: 2
       logo:
         text: Template
         image_light: TeachBooks_logo.svg # Put your logo for the light mode here (can be the same as image_dark)
