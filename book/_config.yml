@@ -26,7 +26,8 @@ sphinx:
       repository_url: "https://github.com/user/repo" #add your own repo URL here
       path_to_docs: "book"
       repository_branch: "main"
-      navbar_start: ["book/_templates/mybutton.html"]
+      templates_path = ["book/_templates"]
+      navbar_start: ["mybutton.html"]
       use_edit_page_button: true
       use_repository_button: true
       use_issues_button : true
@@ -39,6 +40,14 @@ sphinx:
       chtml: {
         mtextInheritFont: true # To typeset text within math prettier
       }
+    html_sidebars = {
+      "**": ["sidebar-nav-bs", "sidebar-ethical-ads"],
+      "index": [],
+      "install": [],
+      "tutorial": [],
+      "backends": [],
+      "auto_examples/index": [],
+    }
   extra_extensions:
     - sphinx.ext.imgconverter
     - jupyterbook_patches
