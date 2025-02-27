@@ -22,5 +22,6 @@ parts:
   - caption: NavbarTest
     chapters:
     - file: install.md
+  - caption: Setup test
     chapters:
     - file: setup.md
