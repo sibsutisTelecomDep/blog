@@ -14,6 +14,7 @@ These pages contain information about the community that leads, supports, and de
 
 setup
 structure
+Contents
 topics/index
 ```
 
