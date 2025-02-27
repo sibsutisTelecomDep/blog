@@ -18,7 +18,6 @@ sphinx:
       use_thebe_lite: true
       exclude_patterns: ["**/_*.yml", "**/*.md", "**/*.ipynb"]
     html_theme_options:
-      home_page_in_toc: true
       logo:
         text: Template
         image_light: TeachBooks_logo.svg # Put your logo for the light mode here (can be the same as image_dark)
