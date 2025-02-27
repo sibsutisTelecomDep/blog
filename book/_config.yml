@@ -32,11 +32,6 @@ sphinx:
       launch_buttons:
         thebe: true
       navbar_start: "install.md"
-      navbar_links:
-        - name: Home
-          url: https://projectpythia.org
-        - name: Foundations
-          url: https://projectpythia.org
       navbar_end: [install.md]
     html_show_copyright: false
     html_last_updated_fmt: '%B %-d, %Y'
