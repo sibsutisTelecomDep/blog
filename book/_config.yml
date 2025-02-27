@@ -30,8 +30,8 @@ sphinx:
       use_issues_button : true
       launch_buttons:
         thebe: true
-      navbar_start: "install.md"
-      navbar_end: [install.md]
+      navbar_start: "book/install.md"
+      navbar_end: "book/install.md"
     html_show_copyright: false
     html_last_updated_fmt: '%B %-d, %Y'
     html_static_path: ["figures"] # add folders that contain files that need to be included, such as the location of the logo(s)
