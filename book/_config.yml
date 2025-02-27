@@ -10,6 +10,18 @@ html:
   favicon : "figures/TB_favicon.ico"
   baseurl :  "https://teachbooks.io/" #Replace this with your own URL
 
+parse:
+  myst_enable_extensions: # default extensions to enable in the myst parser. See https://myst-parser.readthedocs.io/en/latest/using/syntax-optional.html
+    - amsmath
+    - colon_fence
+    - deflist
+    - dollarmath
+    - html_admonition
+    - html_image
+    - replacements
+    - smartquotes
+    - substitution
+    
 sphinx:
   config:
     html_js_files:

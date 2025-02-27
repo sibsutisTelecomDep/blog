@@ -20,8 +20,3 @@ parts:
     - file: changelog.md
     - file: credits.md
   - caption: NavbarTest
-    chapters:
-    - file: install.md
-  - caption: Setup test
-    chapters:
-    - file: setup.md
