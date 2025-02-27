@@ -37,8 +37,18 @@ sphinx:
       navbar_links:
         - name: Home
           url: https://projectpythia.org
+        - name: Foundations
+          url: https://foundations.projectpythia.org
+        - name: Cookbooks
+          url: https://cookbooks.projectpythia.org
+        - name: Resources
+          url: https://projectpythia.org/resource-gallery.html
+        - name: Community
+          url: https://projectpythia.org/index.html#join-us
+        - name: Blog
+          url: https://projectpythia.org/blog.html
       navbar_end:
-        - navbar-icon-links
+        - navbar-logo
     html_show_copyright: false
     html_last_updated_fmt: '%B %-d, %Y'
     html_static_path: ["figures"] # add folders that contain files that need to be included, such as the location of the logo(s)
