@@ -17,9 +17,9 @@ sphinx:
     thebe_config:
       use_thebe_lite: true
       exclude_patterns: ["**/_*.yml", "**/*.md", "**/*.ipynb"]
+    html_theme: sphinx_pythia_theme
     html_theme_options:
-      collapse_navigation: True
-      navigation_depth: 2
+      home_page_in_toc: true
       logo:
         text: Template
         image_light: TeachBooks_logo.svg # Put your logo for the light mode here (can be the same as image_dark)
@@ -32,6 +32,8 @@ sphinx:
       use_issues_button : true
       launch_buttons:
         thebe: true
+      logo:
+        link: https://projectpythia.org
       navbar_start:
         - navbar-logo
       navbar_links:
