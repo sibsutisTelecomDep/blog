@@ -19,6 +19,9 @@ sphinx:
       exclude_patterns: ["**/_*.yml", "**/*.md", "**/*.ipynb"]
     html_theme_options:
       home_page_in_toc: true
+      extra_navbar: |
+        We want your feedback! Fill out this <a href="https://docs.google.com/forms/d/e/1FAIpQLSeVa1TC9xM-dk7qIE2e8bsgSrIP82yYDNw3wew3J46eREJa4w/viewform?usp=sf_link">Google Form</a>
+        or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contribute.html">Contributor's Guide</a>.
       logo:
         text: Template
         image_light: TeachBooks_logo.svg # Put your logo for the light mode here (can be the same as image_dark)
@@ -37,15 +40,7 @@ sphinx:
         - name: Home
           url: https://projectpythia.org
         - name: Foundations
-          url: https://foundations.projectpythia.org
-        - name: Cookbooks
-          url: https://cookbooks.projectpythia.org
-        - name: Resources
-          url: https://projectpythia.org/resource-gallery.html
-        - name: Community
-          url: https://projectpythia.org/index.html#join-us
-        - name: Blog
-          url: https://projectpythia.org/blog.html
+          url: https://projectpythia.org
       navbar_end: [install.md]
     html_show_copyright: false
     html_last_updated_fmt: '%B %-d, %Y'
