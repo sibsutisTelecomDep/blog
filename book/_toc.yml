@@ -2,6 +2,9 @@ format: jb-book
 root: intro.md
 
 parts:
+  - caption: Android
+    chapters:
+    - file: android/overview.md
   - caption: Contents
     chapters:
     - file: some_content/overview.md
@@ -19,6 +22,3 @@ parts:
     - file: references.md
     - file: changelog.md
     - file: credits.md
-  - caption: Button
-    chapters:
-    - file : button.md
