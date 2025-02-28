@@ -46,7 +46,8 @@ sphinx:
       launch_buttons:
         thebe: true
       navbar_start:
-        - "book/install.md"
+        - "button.md"
+        - button
         - navbar-logo
       navbar_end:
         - navbar-logo
