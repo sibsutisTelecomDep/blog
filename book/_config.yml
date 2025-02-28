@@ -9,11 +9,6 @@ only_build_toc_files: true
 html:
   favicon : "figures/TB_favicon.ico"
   baseurl :  "https://teachbooks.io/" #Replace this with your own URL
-  home_page_in_navbar: true
-  use_edit_page_button: true
-  use_repository_button: true
-  use_issues_button: true
-  baseurl: https://jupyterbook.org/
 
 parse:
   myst_enable_extensions: # default extensions to enable in the myst parser. See https://myst-parser.readthedocs.io/en/latest/using/syntax-optional.html
