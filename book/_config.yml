@@ -42,18 +42,17 @@ sphinx:
       use_edit_page_button: true
       use_repository_button: true
       use_issues_button : true
+      html_static_path: ["figures"] # add folders that contain files that need to be included, such as the location of the logo(s)
       show_navbar_depth: 2
       launch_buttons:
         thebe: true
       navbar_start:
-        - "button.md"
         - button
         - navbar-logo
       navbar_end:
         - navbar-logo
     html_show_copyright: false
     html_last_updated_fmt: '%B %-d, %Y'
-    html_static_path: ["figures"] # add folders that contain files that need to be included, such as the location of the logo(s)
     mathjax3_config:
       chtml: {
         mtextInheritFont: true # To typeset text within math prettier
