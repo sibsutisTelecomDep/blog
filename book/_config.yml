@@ -9,6 +9,10 @@ only_build_toc_files: true
 html:
   favicon : "figures/TB_favicon.ico"
   baseurl :  "https://teachbooks.io/" #Replace this with your own URL
+  home_page_in_navbar: false
+  use_edit_page_button: true
+  use_repository_button: true
+  use_issues_button: true
 
 parse:
   myst_enable_extensions: # default extensions to enable in the myst parser. See https://myst-parser.readthedocs.io/en/latest/using/syntax-optional.html
@@ -21,7 +25,7 @@ parse:
     - replacements
     - smartquotes
     - substitution
-    
+
 sphinx:
   config:
     html_js_files:
@@ -30,11 +34,12 @@ sphinx:
       use_thebe_lite: true
       exclude_patterns: ["**/_*.yml", "**/*.md", "**/*.ipynb"]
     html_theme_options:
+      navigation_with_keys: false
       home_page_in_toc: true
-      # logo:
-      #   text: Template
-      #   image_light: TeachBooks_logo.svg # Put your logo for the light mode here (can be the same as image_dark)
-      #   image_dark: TeachBooks_logo_inverted.svg # Put your logo for the dark mode here (can be the same as image_light)
+      logo:
+        text: Template
+        image_light: TeachBooks_logo.svg # Put your logo for the light mode here (can be the same as image_dark)
+        image_dark: TeachBooks_logo_inverted.svg # Put your logo for the dark mode here (can be the same as image_light)
       repository_url: "https://github.com/user/repo" #add your own repo URL here
       path_to_docs: "book"
       repository_branch: "main"
@@ -43,25 +48,10 @@ sphinx:
       use_issues_button : true
       launch_buttons:
         thebe: true
-      logo:
-        link: https://projectpythia.org
       navbar_start:
         - navbar-logo
-      navbar_links:
-        - name: Home
-          url: https://projectpythia.org
-        - name: Foundations
-          url: https://foundations.projectpythia.org
-        - name: Cookbooks
-          url: https://cookbooks.projectpythia.org
-        - name: Resources
-          url: https://projectpythia.org/resource-gallery.html
-        - name: Community
-          url: https://projectpythia.org/index.html#join-us
-        - name: Blog
-          url: https://projectpythia.org/blog.html
       navbar_end:
-        - navbar-icon-links
+        - navbar-logo
     html_show_copyright: false
     html_last_updated_fmt: '%B %-d, %Y'
     html_static_path: ["figures"] # add folders that contain files that need to be included, such as the location of the logo(s)
