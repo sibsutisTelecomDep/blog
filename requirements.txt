@@ -6,6 +6,10 @@ download_link_replacer
 sphinx-exercise
 teachbooks-sphinx-tippy
 sphinx-iframes
+sphinxcontrib-mermaid
+sphinxcontrib-wavedrom
+sphinxcontrib-plantuml
+sphinxcontrib-blockdiag
 
 # Now list the packages you want to download directly from GitHub
 git+https://github.com/TeachBooks/Sphinx-Thebe
