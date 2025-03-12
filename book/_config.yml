@@ -29,6 +29,8 @@ sphinx:
     thebe_config:
       use_thebe_lite: true
       exclude_patterns: ["**/_*.yml", "**/*.md", "**/*.ipynb"]
+    html_context:
+      default_mode: "light"
     html_theme_options:
       navigation_with_keys: false
       home_page_in_toc: true
