@@ -21,8 +21,7 @@ Android SDK включает множество виджетов, которые
 
 # UML example
 
-```plantuml
+
 @startuml
 Bob -> Alice : hello
 @enduml
-```
