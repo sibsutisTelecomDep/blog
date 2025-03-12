@@ -27,3 +27,11 @@ Android SDK включает множество виджетов, которые
    :width: 50mm
 
    Foo <|-- Bar
+
+```{mermaid}
+
+    sequenceDiagram
+      participant Alice
+      participant Bob
+      Alice->John: Hello John, how are you?
+```
