@@ -8,5 +8,5 @@
 [
     <img src="https://github.com/sibsutisTelecomDep/blog/blob/main/book/figures/android/basic_01_main_xml.PNG" width=70% title="Demo on YouTube" alt="Demo on YouTube"/>
 ](
-    
+    https://github.com/sibsutisTelecomDep/blog/blob/main/book/figures/android/basic_01_main_xml.PNG
 )
