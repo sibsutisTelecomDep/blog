@@ -22,6 +22,8 @@ Android SDK включает множество виджетов, которые
 # UML example
 
 
-@startuml
-Bob -> Alice : hello
-@enduml
+.. uml::
+   :caption: Caption with **bold** and *italic*
+   :width: 50mm
+
+   Foo <|-- Bar
