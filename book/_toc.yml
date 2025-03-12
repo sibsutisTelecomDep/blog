@@ -8,7 +8,14 @@ parts:
       sections:
         - file: android/basic_01.md
         - file: android/basic_02.md
-        
+
+  - caption: Git
+    chapters:
+    - file: git/git_tips.md
+      # sections:
+      #   - file: android/basic_01.md
+      #   - file: android/basic_02.md   
+
   - caption: SDR
     chapters:
     - file: some_content/overview.md
