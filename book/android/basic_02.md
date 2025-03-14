@@ -12,7 +12,7 @@
 
 Далее, выберем шаблон для первого приложнеия. Как говорилось выше, выберем `Empty Views Activity`.
 
-![alt text](https://github.com/sibsutisTelecomDep/blog/blob/main/book/figures/android/basic_02_empty_activity_vews.PNG?raw=true)
+![alt text](https://github.com/sibsutisTelecomDep/blog/blob/main/book/figures/android/basic_02_empty_activity_views.PNG?raw=true)
 Рис. 2. Выбор `Empty Views Activity`.
 
 При создании первого приложения, вы могли увидеть интерфейс работы с **"внешним видом"** вашего Android-приложения. 
