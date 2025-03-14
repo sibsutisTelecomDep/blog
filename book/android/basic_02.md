@@ -1,11 +1,26 @@
-# 2. Построение пользовательского интерфейса (начало)
+# 2. Создание первого приложения (начало)
+
+## Hello World
+
+После установки [Androi Studio](https://developer.android.com/studio) создадим свое первое приложение "Hello World". В нем мы ознакомимся со структурой Android-проекта, основными элементами экрана UI (User Interface).
+
+### Создаем проект
+Создадим первое приложение в виде `Empty Views Activity`:
+
+![alt text](https://github.com/sibsutisTelecomDep/blog/blob/main/book/figures/android/basic_01_new_project.PNG?raw=true)
+Рис. 1. Окно создания приложения.
+
+Далее, выберем шаблон для первого приложнеия. Как говорилось выше, выберем `Empty Views Activity`.
+
+![alt text](https://github.com/sibsutisTelecomDep/blog/blob/main/book/figures/android/basic_01_empty_activity_vews.PNG?raw=true)
+Рис. 2. Выбор `Empty Views Activity`.
 
 При создании первого приложения, вы могли увидеть интерфейс работы с **"внешним видом"** вашего Android-приложения. 
 
 По умолчанию, файл `/layout/activity_main.xml` определяет разметку первой `"страницы" (activity)`, которую видит, с которой взаимодействует пользователь.
 
 ![alt text](https://github.com/sibsutisTelecomDep/blog/blob/main/book/figures/android/basic_01_main_xml.PNG?raw=true)
-Рис. 1. Окно макета `Activity`.
+Рис. 3. Окно макета `Activity`.
 
 Листинг 1. `activity_main.xml`
 ```xml
@@ -55,9 +70,9 @@ Android SDK включает множество виджетов, которые
 
 ![alt text](https://github.com/sibsutisTelecomDep/blog/blob/main/book/figures/android/android_class_hierarchy_view.svg?raw=true )
 
-Рис. 2. Иерархия класса `View`. [Источник изображения](https://www.mathematik.uni-marburg.de/~thormae/lectures/graphics1/media/vectorart/android_class_hierarchy_view.svg).
+Рис. 4. Иерархия класса `View`. [Источник изображения](https://www.mathematik.uni-marburg.de/~thormae/lectures/graphics1/media/vectorart/android_class_hierarchy_view.svg).
 
-В нашем примере, на рис. 1 показан экран с виджетами `ConstraintLayout`, `TextView` и `Button`, которые мы можем увидеть в иерархии родительского класса.
+В нашем примере, на рис. 3 показан экран с виджетами `ConstraintLayout`, `TextView` и `Button`, которые мы можем увидеть в иерархии родительского класса.
 
 ### Атрибуты View
 
@@ -105,11 +120,11 @@ flowchart TD
 ```
 Рис. 3. Иерархия представлений виджетов и атрибутов `Activity`.
 
-Корневым элементом иерархии представлений в этом макете является элемент `ConstraintLayout`. В нем должно быть указано пространство имен XML ресурсов Android http://schemas.android.com/apk/res/android. `ConstraintLayout` наследует от дочернего класса `View` с именем `ViewGroup`. Виджет `ViewGroup` предназначен для хранения и размещения других виджетов. LinearLayout используется в тех случаях, когда вы хотите выстроить виджеты в один столбец или строку. Другие субклассы `ViewGroup` — `FrameLayout`, `TableLayout` и `RelativeLayout`.
+Корневым элементом иерархии представлений в этом макете является элемент `ConstraintLayout`. В нем должно быть указано пространство имен XML ресурсов Android http://schemas.android.com/apk/res/android. `ConstraintLayout` наследует от дочернего класса `View` с именем `ViewGroup`. Виджет `ViewGroup` предназначен для хранения и размещения других виджетов. LinearLayout используется в тех случаях, когда вы хотите выстроить виджеты в один столбец или строку. Другие дочерние классы `ViewGroup` — `FrameLayout`, `TableLayout` и `RelativeLayout`.
 
 Если виджет содержится в `ViewGroup`, он называется потомком (child) `ViewGroup`. Корневой элемент `ConstraintLayout` имеет двух потомков: `TextView` и другой элемент `Button`. 
 
-## Управление виджетами из кода Kotlin
+## Управление виджетами из кода Kotlin (ознакомление)
 
 По умолчанию, при создании проекта, мы получаем от Android Studio файлы `activity_main.xml` и `MainActivity.kt` (при создании проекта можно изменить название). В `.xml` файле мы уже определили элементы экрана: `TextView`, `Button`. Далее, нам нужно научиться взаимодействовать с ними. 
 
@@ -133,6 +148,7 @@ class MainActivity : AppCompatActivity() {
 ```
 
 При создании первого приложения в `Android Studio` мы получаем код из **листинга №2**.
+Взаимодействие нашего кода и объектов интерфейса (определенных в файле `.xml`) 
 
 Листинг 3. MainActivity.kt (с добавлением виджетов)
 ```kotlin
