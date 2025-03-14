@@ -15,12 +15,21 @@
 ![alt text](https://github.com/sibsutisTelecomDep/blog/blob/main/book/figures/android/basic_02_empty_activity_views.PNG?raw=true)
 Рис. 2. Выбор `Empty Views Activity`.
 
+Нам предоставят возможность выбрать параметры проекта:
+- Name - название вашего приложения;
+- Language - язык программирвоания (`Java` \ `Kotlin`);
+- Minimum SDK - минимальная версия SDK (версия библиотек, используемых в проекта);
+- Build language - язык системы сборки проекта.
+
+![alt text](https://github.com/sibsutisTelecomDep/blog/blob/main/book/figures/android/basic_02_project_properties.PNG?raw=true)
+Рис. 3. Параметры проекта.
+
 При создании первого приложения, вы могли увидеть интерфейс работы с **"внешним видом"** вашего Android-приложения. 
 
 По умолчанию, файл `/layout/activity_main.xml` определяет разметку первой `"страницы" (activity)`, которую видит, с которой взаимодействует пользователь.
 
 ![alt text](https://github.com/sibsutisTelecomDep/blog/blob/main/book/figures/android/basic_01_main_xml.PNG?raw=true)
-Рис. 3. Окно макета `Activity`.
+Рис. 4. Окно макета `Activity`.
 
 Листинг 1. `activity_main.xml`
 ```xml
@@ -70,9 +79,9 @@ Android SDK включает множество виджетов, которые
 
 ![alt text](https://github.com/sibsutisTelecomDep/blog/blob/main/book/figures/android/android_class_hierarchy_view.svg?raw=true )
 
-Рис. 4. Иерархия класса `View`. [Источник изображения](https://www.mathematik.uni-marburg.de/~thormae/lectures/graphics1/media/vectorart/android_class_hierarchy_view.svg).
+Рис. 5. Иерархия класса `View`. [Источник изображения](https://www.mathematik.uni-marburg.de/~thormae/lectures/graphics1/media/vectorart/android_class_hierarchy_view.svg).
 
-В нашем примере, на рис. 3 показан экран с виджетами `ConstraintLayout`, `TextView` и `Button`, которые мы можем увидеть в иерархии родительского класса.
+В нашем примере, на рис. 4 показан экран с виджетами `ConstraintLayout`, `TextView` и `Button`, которые мы можем увидеть в иерархии родительского класса.
 
 ### Атрибуты View
 
