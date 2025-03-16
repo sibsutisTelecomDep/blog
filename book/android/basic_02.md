@@ -18,7 +18,7 @@
 Нам предоставят возможность выбрать параметры проекта:
 - Name - название вашего приложения;
 - Language - язык программирвоания (`Java` \ `Kotlin`);
-- Minimum SDK - минимальная версия SDK (версия библиотек, используемых в проекта);
+- Minimum SDK - минимальная версия SDK (версия библиотек, используемых в проекте);
 - Build language - язык системы сборки проекта.
 
 ![alt text](https://github.com/sibsutisTelecomDep/blog/blob/main/book/figures/android/basic_02_project_properties.PNG?raw=true)
@@ -30,6 +30,7 @@
 В открывшемся проекте мы увидмим структуру:
 
 ![alt text](https://github.com/sibsutisTelecomDep/blog/blob/main/book/figures/android/basic_02_project_structure.PNG?raw=true)
+
 Рис. 4. Стркутура проекта.
 
 Вкратце, проект состоит из нескольких важный директорий:
