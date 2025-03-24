@@ -45,7 +45,7 @@ sphinx:
       use_repository_button: true
       use_issues_button : true
       html_static_path: ["figures"] # add folders that contain files that need to be included, such as the location of the logo(s)
-      show_navbar_depth: 2
+      show_navbar_depth: 1
       launch_buttons:
         thebe: true
       navbar_start:
