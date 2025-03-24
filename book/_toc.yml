@@ -5,7 +5,7 @@ parts:
 
   - caption: Дипломы
     chapters:
-    - file: thesis/student_thesis.md
+    - file: thesis/students_thesis.md
 
   - caption: Android
     chapters:
