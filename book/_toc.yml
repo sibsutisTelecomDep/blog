@@ -6,6 +6,8 @@ parts:
   - caption: Темы дипломных работ
     chapters:
     - file: thesis/overview.md
+      sections:
+        - file: thesis/students_thesis.md
 
   - caption: Android
     chapters:
