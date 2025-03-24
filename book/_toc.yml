@@ -3,7 +3,7 @@ root: intro.md
 
 parts:
 
-  - caption: Дипломы
+  - caption: Темы дипломных работ
     chapters:
     - file: thesis/students_thesis.md
 
@@ -18,6 +18,10 @@ parts:
   - caption: Git
     chapters:
     - file: git/git_tips.md
+
+  - caption: Полезные ссылки
+    chapters:
+    - file: usefull_links_books/usefull_links_books.md
       # sections:
       #   - file: android/basic_01.md
       #   - file: android/basic_02.md   
