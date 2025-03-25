@@ -3,7 +3,7 @@ root: intro.md
 
 parts:
 
-  - caption: Темы дипломных работ
+  - caption: Студенты
     chapters:
     - file: thesis/students_thesis.md
 
