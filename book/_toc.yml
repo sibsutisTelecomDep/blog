@@ -11,6 +11,7 @@ parts:
     chapters:
     - file: android/overview.md
       sections:
+        - file: android/kotlin_basic_01.md
         - file: android/basic_01.md
         - file: android/basic_02.md
         - file: android/basic_03.md

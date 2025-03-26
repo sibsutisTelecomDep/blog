@@ -4,6 +4,8 @@
 
 ## Список заметок
 
+[](./kotlin_basic_01.md)
+
 [](./basic_01.md)
 
 [](./basic_02.md)
