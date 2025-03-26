@@ -7,7 +7,7 @@ parts:
     chapters:
     - file: thesis/students_thesis.md
 
-  - caption: 
+  - caption: Android
     chapters:
     - file: android/overview.md
       sections:

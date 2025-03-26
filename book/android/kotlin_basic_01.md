@@ -18,7 +18,7 @@
 
 [Kotlin](https://kotlinlang.org/) — это язык программирования, широко используемый разработчиками Android во всем мире. Эта тема представляет собой ускоренный курс Kotlin, который поможет вам быстро приступить к работе.
 
-## Объявление переменной
+## Variable declaration
 
 Kotlin использует два разных ключевых слова для объявления переменных: `val` и `var` .
 
@@ -36,7 +36,7 @@ var count: Int = 10
 Ключевое слово `var` означает, что вы можете переназначать значения для `count` по мере необходимости. Например, вы можете изменить значение `count` с `10` на `15` :
 ```Kotlin
 var count: Int = 10
-    count = 15
+count = 15
 ```
 Однако некоторые значения не подлежат изменению. Рассмотрим `String` с именем `languageName` . Если вы хотите, чтобы `languageName` всегда содержало значение «Kotlin», вы можете объявить `languageName` используя ключевое слово `val` :
 ```Kotlin
@@ -56,8 +56,8 @@ val languageName: String = "Kotlin"
 val languageName = "Kotlin"
 val upperCaseName = languageName.toUpperCase()
     
-    // Fails to compile
-    languageName.inc()
+// Fails to compile
+languageName.inc()
 ```
 
 `toUpperCase()` — это функция, которую можно вызывать только для переменных типа `String` . Поскольку компилятор Kotlin определил `languageName` как `String` , вы можете смело вызывать `toUpperCase()` . Однако, `inc()` является операторной функцией `Int` , поэтому ее нельзя вызвать для `String` . Подход Kotlin к выводу типов обеспечивает как краткость, так и безопасность типов.
@@ -110,7 +110,7 @@ val answerString: String = if (count == 42) {
         "The answer eludes me."
     }
     
-    println(answerString)
+println(answerString)
 ```
 Неявно каждая условная ветвь возвращает результат выражения в своей последней строке, поэтому вам не нужно использовать ключевое слово `return` . Поскольку результат всех трех ветвей имеет тип `String` , результат выражения if-else также имеет тип `String` . В этом примере `answerString` присваивается начальное значение из результата выражения if-else. Вывод типа можно использовать, чтобы опустить явное объявление типа для `answerString` , но часто полезно включить его для ясности.
 
@@ -124,17 +124,17 @@ val answerString = when {
         else -> "The answer eludes me."
     }
     
-    println(answerString)
+println(answerString)
 ```
 Каждая ветвь выражения `when` представлена ​​условием, стрелкой ( `->` ) и результатом. Если условие в левой части стрелки принимает значение true, то возвращается результат выражения в правой части. Обратите внимание, что выполнение не переходит от одной ветки к другой. Код в примере выражения `when` функционально эквивалентен коду в предыдущем примере, но, возможно, его легче читать.
 
 Условные выражения Kotlin подчеркивают одну из его наиболее мощных функций — _умное приведение типов_ . Вместо использования оператора безопасного вызова или оператора утверждения ненулевого значения для работы со значениями, допускающими значение NULL, вы можете вместо этого проверить, содержит ли переменная ссылку на значение NULL, используя условный оператор, как показано в следующем примере:
 ```Kotlin
 val languageName: String? = null
-    if (languageName != null) {
-        // No need to write languageName?.toUpperCase()
-        println(languageName.toUpperCase())
-    }
+if (languageName != null) {
+    // No need to write languageName?.toUpperCase()
+    println(languageName.toUpperCase())
+}
 ```
 Внутри условной ветви `languageName` может рассматриваться как не допускающее значения NULL. Kotlin достаточно умен, чтобы распознать, что условием выполнения ветки является то, что `languageName` не содержит нулевого значения, поэтому вам не нужно рассматривать `languageName` как допускающий значение NULL в этой ветке. Это умное приведение работает для проверок на null, [проверок типов](https://kotlinlang.org/docs/reference/typecasts.html#is-and-is-operators) или любых условий, удовлетворяющих [контракту](https://kotlinlang.org/docs/reference/whatsnew13.html#contracts) .
 
@@ -147,14 +147,14 @@ val languageName: String? = null
 Основываясь на предыдущих примерах, вот полная функция Kotlin:
 ```Kotlin
 fun generateAnswerString(): String {
-        val answerString = if (count == 42) {
-            "I have the answer."
-        } else {
-            "The answer eludes me"
-        }
-    
-        return answerString
+    val answerString = if (count == 42) {
+        "I have the answer."
+    } else {
+        "The answer eludes me"
     }
+    
+    return answerString
+}
 ```
 Функция в приведенном выше примере имеет `generateAnswerString` . Это не требует никаких входных данных. Он выводит результат типа `String` . Чтобы вызвать функцию, используйте ее имя, за которым следует оператор вызова ( `()` ). В приведенном ниже примере переменная `answerString` инициализируется результатом метода `generateAnswerString()` .
 ```Kotlin
@@ -163,14 +163,14 @@ val answerString = generateAnswerString()
 Функции могут принимать аргументы в качестве входных данных, как показано в следующем примере:
 ```Kotlin
 fun generateAnswerString(countThreshold: Int): String {
-        val answerString = if (count > countThreshold) {
-            "I have the answer."
-        } else {
-            "The answer eludes me."
-        }
-    
-        return answerString
+    val answerString = if (count > countThreshold) {
+        "I have the answer."
+    } else {
+        "The answer eludes me."
     }
+
+    return answerString
+}
 ```
 При объявлении функции вы можете указать любое количество аргументов и их типы. В приведенном выше примере `generateAnswerString()` принимает один аргумент с именем `countThreshold` типа `Int` . Внутри функции вы можете обратиться к аргументу, используя его имя.
 
@@ -183,20 +183,20 @@ val answerString = generateAnswerString(42)
 `generateAnswerString()` — довольно простая функция. Функция объявляет переменную и затем немедленно возвращает значение. Когда из функции возвращается результат одного выражения, вы можете пропустить объявление локальной переменной, напрямую вернув результат выражения if-else, содержащегося в функции, как показано в следующем примере:
 ```Kotlin
 fun generateAnswerString(countThreshold: Int): String {
-        return if (count > countThreshold) {
-            "I have the answer."
-        } else {
-            "The answer eludes me."
-        }
+    return if (count > countThreshold) {
+        "I have the answer."
+    } else {
+        "The answer eludes me."
     }
+}
 ```
 Вы также можете заменить ключевое слово return оператором присваивания:
 ```Kotlin
 fun generateAnswerString(countThreshold: Int): String = if (count > countThreshold) {
-            "I have the answer"
-        } else {
-            "The answer eludes me"
-        }
+        "I have the answer"
+    } else {
+        "The answer eludes me"
+    }
 ```
 ### Anonymous functions
 
@@ -214,7 +214,7 @@ val stringLengthFunc: (String) -> Int = { input ->
         input.length
     }
     
-    val stringLength: Int = stringLengthFunc("Android")
+val stringLength: Int = stringLengthFunc("Android")
 ```
 ### Higher-order functions
 
@@ -223,9 +223,9 @@ val stringLengthFunc: (String) -> Int = { input ->
 Вот пример функции высшего порядка:
 ```Kotlin
 fun stringMapper(str: String, mapper: (String) -> Int): Int {
-        // Invoke function
-        return mapper(str)
-    }
+    // Invoke function
+    return mapper(str)
+}
 ```
 Функция `stringMapper()` принимает `String` вместе с функцией, которая извлекает значение `Int` из `String` , которую вы в нее передаете.
 
@@ -254,13 +254,13 @@ class Car
 Классы представляют состояние с помощью свойств. [Свойство](https://kotlinlang.org/docs/reference/properties.html) — это переменная уровня класса, которая может включать в себя метод получения, метод установки и вспомогательное поле. Поскольку для движения автомобилю необходимы колеса, вы можете добавить список объектов `Wheel` как свойство `Car` , как показано в следующем примере:
 ```Kotlin
 class Car {
-        val wheels = listOf<Wheel>()
-    }
+    val wheels = listOf<Wheel>()
+}
 ```
 Обратите внимание, что `wheels` — это `public val` , а это означает, что доступ `wheels` можно получить за пределами класса `Car` , и его нельзя переназначить. Если вы хотите получить экземпляр `Car` , вы должны сначала вызвать его конструктор. Оттуда вы можете получить доступ к любому из его доступных свойств.
 ```Kotlin
 val car = Car() // construct a Car
-    val wheels = car.wheels // retrieve the wheels value from the Car
+val wheels = car.wheels // retrieve the wheels value from the Car
 ```
 Если вы хотите настроить свои колеса, вы можете определить собственный конструктор, который определяет, как инициализируются свойства вашего класса:
 ```Kotlin
@@ -276,25 +276,25 @@ class Car(val wheels: List<Wheel>)
 ```Kotlin
 class Car(val wheels: List<Wheel>) {
     
-        private val doorLock: DoorLock = ...
-    
-        fun unlockDoor(key: Key): Boolean {
-            // Return true if key is valid for door lock, false otherwise
-        }
+    private val doorLock: DoorLock = ...
+
+    fun unlockDoor(key: Key): Boolean {
+        // Return true if key is valid for door lock, false otherwise
     }
+}
 ```
 Если вы хотите настроить способ ссылки на свойство, вы можете предоставить собственный метод получения и установки. Например, если вы хотите предоставить доступ к методу получения свойства, ограничивая при этом доступ к его методу установки, вы можете назначить этот метод установки как `private` :
 ```Kotlin
 class Car(val wheels: List<Wheel>) {
     
-        private val doorLock: DoorLock = ...
-    
-        var gallonsOfFuelInTank: Int = 15
-            private set
-    
-        fun unlockDoor(key: Key): Boolean {
-            // Return true if key is valid for door lock, false otherwise
-        }
+    private val doorLock: DoorLock = ...
+
+    var gallonsOfFuelInTank: Int = 15
+        private set
+
+    fun unlockDoor(key: Key): Boolean {
+        // Return true if key is valid for door lock, false otherwise
     }
+}
 ```
 Комбинируя свойства и функции, вы можете создавать классы, моделирующие все типы объектов.
