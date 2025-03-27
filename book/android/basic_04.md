@@ -1,6 +1,6 @@
-# 4. Работа виджетами (widgets)
+# 4. Работа ViewGroup
 Снова про `root` класс для всех виджетов. 
-## View
+# View
 Android SDK включает множество виджетов, которые являются дочерним классом класса `View`. Таким образом, каждый виджет является экземпляром класса `View`, как и отражено на рисунке ниже. 
 
 ![alt text](https://github.com/sibsutisTelecomDep/blog/blob/main/book/figures/android/android_class_hierarchy_view.svg?raw=true )
