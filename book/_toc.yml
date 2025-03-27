@@ -15,6 +15,7 @@ parts:
         - file: android/basic_01.md
         - file: android/basic_02.md
         - file: android/basic_03.md
+        - file: android/basic_04.md
 
   - caption: Git
     chapters:
