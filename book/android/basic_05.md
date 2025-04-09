@@ -107,15 +107,20 @@ val randomIntent = Intent(this, ViewExamples::class.java)
 startActivity(randomIntent)
 ```
 
-Создайте `Intent` для определенного компонента.  Это обеспечивает удобный способ создания `Intent`, которое предназначено для выполнения `hard-coded` класса.
-
 Согласно документации аргументами функции являются:
 ```
+Создание `Intent` для определенного компонента.  Это обеспечивает удобный способ создания `Intent`, которое предназначено для выполнения `hard-coded` класса.
+
 Params:
 packageContext – A Context of the application package implementing this class. 
 cls – The component class that is to be used for the intent.
 ```
+
+Первый параметр – это `Context`. `Activity` является подклассом `Context`, можем использовать запись `ИМЯ_КЛАССА_В_КОТОРОМ_НАХОДИМСЯ.this`, или укороченную запись `this`.
+
 Метод `startActivity(randomIntent)` выполняет переход на необходимый нам класс, т.е. `Activity`.
+
+
 
 
 
