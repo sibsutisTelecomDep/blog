@@ -18,7 +18,7 @@ Android SDK включает множество виджетов, которые
 
 Далее, вам откроется окно с настройками нового `Activity`. Необходимо ввести имя и поставить галочку на автоматическое создание файла `layout` для `Activity`.
 
-![alt text](https://github.com/sibsutisTelecomDep/blog/blob/main/book/figures/android/basic_05_create_new_activity_naming.png?raw=true )
+![alt text](https://github.com/sibsutisTelecomDep/blog/blob/main/book/figures/android/basic_05_create_new_activity_naming.PNG?raw=true )
 
 Рис. 3. Настройка нового `Activity`.
 
@@ -58,4 +58,5 @@ Android SDK включает множество виджетов, которые
 </manifest>
 ```
 
-Где мы можем увидеть наше новое `Activity`.
+Где мы можем увидеть наше новое `Activity` в списке проекта.
+
