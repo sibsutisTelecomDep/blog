@@ -12,4 +12,7 @@
 
 [](./basic_03.md)
 
+[](./basic_04.md)
+
+[](./basic_05.md)
 
