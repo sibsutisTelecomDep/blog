@@ -8,7 +8,7 @@ Android SDK включает множество виджетов, которые
 Рис. 1. Иерархия класса `View`. [Источник изображения](https://www.mathematik.uni-marburg.de/~thormae/lectures/graphics1/media/vectorart/android_class_hierarchy_view.svg).
 
 
-# Создание нового Activity
+## Создание нового Activity
 
 Для начала, создадим новое `Activity`, в котором будем создавать виджеты и работать из `Activity`.
 
@@ -59,4 +59,65 @@ Android SDK включает множество виджетов, которые
 ```
 
 Где мы можем увидеть наше новое `Activity` в списке проекта.
+
+### Переход между Activity (Intent)
+
+В рамках "удобства" по работе с несколькими `Activity` рассмотрим небольшой пример работы класса [Intent]()
+
+`Intent` — это абстрактное описание операции, которая должна быть выполнена. Его можно использовать с [startActivity](https://developer.android.com/reference/android/content/Context#startActivity(android.content.Intent)) для запуска [Activity](https://developer.android.com/reference/android/app/Activity), [broadcastIntent](https://developer.android.com/reference/android/content/Context#sendBroadcast(android.content.Intent)) для отправки его любым заинтересованным компонентам [BroadcastReceiver](https://developer.android.com/reference/android/content/BroadcastReceiver) и [Context.startService(Intent)](https://developer.android.com/reference/android/content/Context#startService(android.content.Intent)) или [Context.bindService(Intent, BindServiceFlags, Executor, ServiceConnection)](https://developer.android.com/reference/android/content/Context#bindService(android.content.Intent,%20android.content.Context.BindServiceFlags,%20java.util.concurrent.Executor,%20android.content.ServiceConnection)) для связи с фоновой службой [Service](https://developer.android.com/reference/android/app/Service).
+
+Для начала, нам понадобится только метод `startActivity()`. Добавим переход на другое `Activity` при помощи `Button` во время нажатия (`setOnClickListener`).
+Добавим кнопку в файле `activity_имя.xml`:
+
+```xml
+<Button
+    android:id="@+id/bViews"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Views" />
+```
+
+Инициализируем кнопку в коде `ИМЯ_Activity.kt`, выделяя память под кнопку в методе `onCreate()`, инициализируя обработчик нажатия на кнопку в методе `onResume()` (когда `Activity` уже видна пользователю):
+
+```Kotlin
+class MainActivity : AppCompatActivity() {
+
+    private lateinit var bViewExamples: Button
+
+    // onCreate() – вызывается при первом создании Activity
+    override fun onCreate(savedInstanceState: Bundle?) {
+
+        ...
+        ...
+        bViewExamples = findViewById<Button>(R.id.bViews)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        bViewExamples.setOnClickListener({
+            val randomIntent = Intent(this, ViewExamples::class.java)
+            startActivity(randomIntent)
+        });
+    }
+```
+Из обработчика нажатия мы видим создание экземпляра класса `Intent`, используя конструктор `public Intent(Context packageContext, Class<?> cls)`:
+
+```Kotlin
+val randomIntent = Intent(this, ViewExamples::class.java)
+startActivity(randomIntent)
+```
+
+Создайте `Intent` для определенного компонента.  Это обеспечивает удобный способ создания `Intent`, которое предназначено для выполнения `hard-coded` класса.
+
+Согласно документации аргументами функции являются:
+```
+Params:
+packageContext – A Context of the application package implementing this class. 
+cls – The component class that is to be used for the intent.
+```
+Метод `startActivity(randomIntent)` выполняет переход на необходимый нам класс, т.е. `Activity`.
+
+
+
+## Виджеты (Views)
 
