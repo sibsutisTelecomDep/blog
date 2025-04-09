@@ -16,6 +16,7 @@ parts:
         - file: android/basic_02.md
         - file: android/basic_03.md
         - file: android/basic_04.md
+        - file: android/basic_05.md
         - file: android/tasks.md
 
   - caption: Git
