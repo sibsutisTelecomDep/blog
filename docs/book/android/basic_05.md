@@ -125,7 +125,7 @@ cls – The component class that is to be used for the intent.
 
 ### TextView
 
-Здесь будет примерчик еще фикс
+Здесь будет примерчик еще фикс abrc
 
 ### Button
 
