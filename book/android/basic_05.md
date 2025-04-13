@@ -60,7 +60,7 @@ Android SDK включает множество виджетов, которые
 
 Где мы можем увидеть наше новое `Activity` в списке проекта.
 
-### Переход между Activity (Intent)
+### Переход между Activity (Intent, вкратце)
 
 В рамках "удобства" по работе с несколькими `Activity` рассмотрим небольшой пример работы класса [Intent]()
 
@@ -121,8 +121,11 @@ cls – The component class that is to be used for the intent.
 Метод `startActivity(randomIntent)` выполняет переход на необходимый нам класс, т.е. `Activity`.
 
 
-
-
-
 ## Виджеты (Views)
 
+### TextView
+
+
+### Button
+
+### 
