@@ -12,7 +12,7 @@
 
 Имя удалённого репозитория должно совпадать с названием локального репозитория (локальной папки проекта)
 
-![git_test_2.PNG](https://github.com/sibsutisTelecomDep/blog/blob/main/book/figures/git/git_test_2.png?raw=true )
+![git_test_2.PNG](https://github.com/sibsutisTelecomDep/blog/blob/main/docs/figures/git/git_test_2.png?raw=true )
 
 ### 1.2. Создание локального репозитория
 
