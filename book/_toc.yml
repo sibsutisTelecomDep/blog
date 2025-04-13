@@ -1,0 +1,49 @@
+format: jb-book
+root: intro.md
+
+parts:
+
+  - caption: Студенты
+    chapters:
+    - file: thesis/students_thesis.md
+
+  - caption: Android
+    chapters:
+    - file: android/overview.md
+      sections:
+        - file: android/kotlin_basic_01.md
+        - file: android/basic_01.md
+        - file: android/basic_02.md
+        - file: android/basic_03.md
+        - file: android/basic_04.md
+        - file: android/basic_05.md
+        - file: android/tasks.md
+
+  - caption: Git
+    chapters:
+    - file: git/git_tips.md
+
+  - caption: Полезные ссылки
+    chapters:
+    - file: usefull_links_books/usefull_links_books.md
+      # sections:
+      #   - file: android/basic_01.md
+      #   - file: android/basic_02.md   
+
+  # - caption: SDR
+  #   chapters:
+  #   - file: some_content/overview.md
+  #     sections:
+  #     - file: some_content/text_and_code.ipynb
+  #     - file: exercises
+  #       sections:
+  #       - file: exercises/001.md
+  #       - file: exercises/002.md
+  #       - file: exercises/003.md
+  #       - file: exercises/004.md
+  #       - file: exercises/005.md
+  #       - file: exercises/006.md
+  #       - file: exercises/summary
+  #     - file: references.md
+  #     - file: changelog.md
+  #     - file: credits.md
