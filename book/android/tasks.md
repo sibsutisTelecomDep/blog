@@ -26,6 +26,6 @@
 
 1. Создать новое `Activity` для работы с `MediaPlayer`;
 2. MediaPlayer должен поддерживать функции: воспроизведение текущего трека, пауза текущего трека, обработка перехода `Activity` в состояние `onPause()`, регулировка громкости, `SeekBar` для отображения текущей длительности трека и его движение, перемотка трека (при помощи `SeekBar`);
-3. Возможность вопроизводить музыку из хранилища телефона при помощи  [Permission](https://github.com/sibsutisTelecomDep/blog/tree/main/Android/Examples/android_notes/app/src/main/java/com/example/android_notes/activities/MediaPlayerActivity.kt), строки 41-53;
+3. Возможность вопроизводить музыку из хранилища телефона при помощи  [Permission](https://github.com/sibsutisTelecomDep/android_notes/blob/master/Examples/android_notes/app/src/main/java/com/example/android_notes/activities/MediaPlayerActivity.kt), строки 41-53;
 4. Важно реализовать проверку текущего файла на директорию (`isDirectory`);
 4. Отображение списка треков на экране `Activity`.
