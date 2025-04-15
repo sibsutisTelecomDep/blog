@@ -1,0 +1,3 @@
+[submodule "android_notes"]
+	path = android_notes
+	url = https://github.com/sibsutisTelecomDep/android_notes
