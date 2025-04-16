@@ -123,9 +123,101 @@ cls – The component class that is to be used for the intent.
 
 ## Виджеты (Views)
 
+### findViewById()
+Метод `findViewById()` возвращает объект класса `View` по его идентификатору на разметке (какой то из виджетов, например кнопку). Теперь, имея данный экземпляр **виджета**, вы можете вызывать реализованные для него методы, такие как изменение размеров, цвета, текста и т.п. Метод работает таким образом, что получает этот объект из предварительно подготовленного через инфлейт (парсинг разметки) и сгенерированного на его основе класса R нужный нам виджет из дерева объектов отображаемых на экране.
+
 ### TextView
 
-Здесь будет примерчик еще фикс abrc
+**Инициализация**
+
+В рамках `.xml-layout`'а добавляем след. образом:
+
+```xml
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="130dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="579dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_back_to_main" />
+```
+
+В коде Kotlin мы должны воспользоваться классом `TextView`, импортировав его из `import android.widget.TextView`. 
+
+Инициализация в коде и работа с конкретным обхъектом `View` происходит при помощи метода findVewiById():
+```Kotlin
+private lateinit var tvView_01: TextView
+tvView_01 = findViewById(R.id.textView)
+```
+#### Атрибуты
+
+**Программное изменение текста**
+
+Программно можно изменить наполнение TextView при помощи метода класса: `setText(CharSequence text)`:
+```Kotlin
+tvView_01.setText("Hello from Code")
+```
+
+**Изменение размера текста**
+
+Приведем лишь 2 примера с установлением размера текста:
+```Kotlin
+// COMPLEX_UNIT_PX - Value is raw pixels                
+tvView_01.setTextSize(TypedValue.COMPLEX_UNIT_PX, 10F)  
+// COMPLEX_UNIT_DIP - Value is Device Independent Pixels
+tvView_01.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 20F) 
+```
+
+Остальные возможные типы значений размера текста можно увидеть в классе `TypedValue.java`:
+```Java
+    /** complex unit: Value is raw pixels. */
+    public static final int COMPLEX_UNIT_PX = 0;
+    /** complex unit: Value is Device Independent Pixels. */
+    public static final int COMPLEX_UNIT_DIP = 1;
+    /** complex unit: Value is a scaled pixel. */
+    public static final int COMPLEX_UNIT_SP = 2;
+    /** complex unit: Value is in points. */
+    public static final int COMPLEX_UNIT_PT = 3;
+    /** complex unit: Value is in inches. */
+    public static final int COMPLEX_UNIT_IN = 4;
+    /** complex unit: Value is in millimeters. */
+    public static final int COMPLEX_UNIT_MM = 5;
+```
+
+**Изменение цвета текста**
+
+```Kotlin                      
+tvView_01.setTextColor(Color.rgb(255,192,0))    
+```
+![alt text](https://github.com/sibsutisTelecomDep/blog/blob/main/book/figures/android/widgets/set_text_size.png?raw=true )
+
+
+**Возможность нажать на TextView**
+
+Если вы хотите, чтобы `TextView` обрабатывал нажатия (атрибут `android:onClick`), то не забывайте также использовать в связке атрибут `android:clickable="true"` (в файле layout/*.xml). Иначе работать не будет!
+
+```Kotlin
+// Возможность нажать на кнопку                           
+tvView_01.setOnClickListener({                             
+  tvView_01.setTextColor(Color.rgb(55,12,0))              
+})                                                         
+```
+Меняем цвет текста при нажатии на `TextView`.
+
+![alt text](https://github.com/sibsutisTelecomDep/blog/blob/main/book/figures/android/widgets/set_onclick_listener.png?raw=true )
+
+
+
+
+
+
+
+
+
+
 
 ### Button
 
