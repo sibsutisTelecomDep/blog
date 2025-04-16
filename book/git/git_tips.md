@@ -55,6 +55,33 @@ git pull
 
 ```
 
+### 1.4. Добавление SSH-ключа в профиль github
+
+[Оригинальная статья по подключению SSH к профилю github](https://docs.github.com/ru/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+
+1. Для начала необходимо сгенерировать SSH-ключ:
+```bash
+ssh-keygen -t ed25519 -C your_email@example.com
+```
+Путь и ключевую фразу добавляйте по желанию.
+
+2. Выведете содержимое сгенерированных ключей (нам нжунен публичный `.pub`):
+
+```bash
+cd ~/.ssh/
+cat id_ed25519.pub 
+```
+3. Копируем полученное содержимое в профиль github:
+
+![git_add_ssh_key.PNG](https://github.com/sibsutisTelecomDep/blog/blob/main/book/figures/git/github_add_ssh_key.png?raw=true )
+
+4. Клонируем репозиторий при помощи SSH-ссылки:
+
+![git_add_ssh_key.PNG](https://github.com/sibsutisTelecomDep/blog/blob/main/book/figures/git/git_clone_with_ssh.png?raw=true )
+
+5. Проверяем работу командами `push`, `pull`. Работа с профилем становится в разы удобнее.
+
+
 ## 2. Небольшие практические наработки
 
 ### Перенести последний commit [из одной ветки в текущую](https://ru.stackoverflow.com/questions/57963/%D0%9F%D0%B5%D1%80%D0%B5%D0%BD%D0%B5%D1%81%D1%82%D0%B8-%D0%BA%D0%BE%D0%BC%D0%BC%D0%B8%D1%82-%D0%B8%D0%B7-%D0%BE%D0%B4%D0%BD%D0%BE%D0%B9-%D0%B2%D0%B5%D1%82%D0%BA%D0%B8-%D0%B2-%D0%B4%D1%80%D1%83%D0%B3%D1%83%D1%8E)
