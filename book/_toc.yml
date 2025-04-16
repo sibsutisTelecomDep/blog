@@ -11,13 +11,15 @@ parts:
     chapters:
     - file: android/overview.md
       sections:
+        - file: android/tasks.md
         - file: android/kotlin_basic_01.md
         - file: android/basic_01.md
         - file: android/basic_02.md
         - file: android/basic_03.md
         - file: android/basic_04.md
         - file: android/basic_05.md
-        - file: android/tasks.md
+        - file: android/basic_06_permissions.md
+        
 
   - caption: Git
     chapters:

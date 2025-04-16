@@ -29,3 +29,10 @@
 3. Возможность вопроизводить музыку из хранилища телефона при помощи  [Permission](https://github.com/sibsutisTelecomDep/android_notes/blob/master/Examples/android_notes/app/src/main/java/com/example/android_notes/activities/MediaPlayerActivity.kt), строки 41-53;
 4. Важно реализовать проверку текущего файла на директорию (`isDirectory`);
 4. Отображение списка треков на экране `Activity`.
+
+## 3. Местоположение смартфона. Location.
+ Цель: получить доступ к данным о местоположении Android-телефона и вывести на экран значения.
+
+ 1. Создать `Activity` **Location** в основном окне `MainActivity`;
+ 2. Получить доступ к сервису `Location` при помощи **permissions**: `ACCESS_FINE_LOCATION`, `ACCESS_COARSE_LOCATION`
+ 3. Ото
