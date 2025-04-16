@@ -192,7 +192,7 @@ tvView_01.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 20F)
 ```Kotlin                      
 tvView_01.setTextColor(Color.rgb(255,192,0))    
 ```
-![alt text](https://github.com/sibsutisTelecomDep/blog/blob/main/book/figures/android/widgets/set_text_size.png?raw=true )
+![alt text](https://github.com/sibsutisTelecomDep/blog/blob/main/book/figures/android/widgets/set_text_size.PNG?raw=true )
 
 
 **Возможность нажать на TextView**
@@ -207,7 +207,7 @@ tvView_01.setOnClickListener({
 ```
 Меняем цвет текста при нажатии на `TextView`.
 
-![alt text](https://github.com/sibsutisTelecomDep/blog/blob/main/book/figures/android/widgets/set_onclick_listener.png?raw=true )
+![alt text](https://github.com/sibsutisTelecomDep/blog/blob/main/book/figures/android/widgets/set_onclick_listener.PNG?raw=true )
 
 
 
