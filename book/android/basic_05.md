@@ -8,7 +8,7 @@ Android SDK включает множество виджетов, которые
 Рис. 1. Иерархия класса `View`. [Источник изображения](https://www.mathematik.uni-marburg.de/~thormae/lectures/graphics1/media/vectorart/android_class_hierarchy_view.svg).
 
 
-## Создание нового Activity
+# Создание нового Activity
 
 Для начала, создадим новое `Activity`, в котором будем создавать виджеты и работать из `Activity`.
 
@@ -60,7 +60,7 @@ Android SDK включает множество виджетов, которые
 
 Где мы можем увидеть наше новое `Activity` в списке проекта.
 
-### Переход между Activity (Intent, вкратце)
+## Переход между Activity (Intent, вкратце)
 
 В рамках "удобства" по работе с несколькими `Activity` рассмотрим небольшой пример работы класса [Intent]()
 
@@ -121,12 +121,12 @@ cls – The component class that is to be used for the intent.
 Метод `startActivity(randomIntent)` выполняет переход на необходимый нам класс, т.е. `Activity`.
 
 
-## Виджеты (Views)
+# Виджеты (Views)
 
-### findViewById()
+## findViewById()
 Метод `findViewById()` возвращает объект класса `View` по его идентификатору на разметке (какой то из виджетов, например кнопку). Теперь, имея данный экземпляр **виджета**, вы можете вызывать реализованные для него методы, такие как изменение размеров, цвета, текста и т.п. Метод работает таким образом, что получает этот объект из предварительно подготовленного через инфлейт (парсинг разметки) и сгенерированного на его основе класса R нужный нам виджет из дерева объектов отображаемых на экране.
 
-### TextView
+## TextView
 
 **Инициализация**
 
@@ -152,7 +152,7 @@ cls – The component class that is to be used for the intent.
 private lateinit var tvView_01: TextView
 tvView_01 = findViewById(R.id.textView)
 ```
-#### Атрибуты
+### Атрибуты
 
 **Программное изменение текста**
 
@@ -210,15 +210,72 @@ tvView_01.setOnClickListener({
 ![alt text](https://github.com/sibsutisTelecomDep/blog/blob/main/book/figures/android/widgets/set_onclick_listener.PNG?raw=true )
 
 
+## Button
+
+Наследуется от `TextView`и является базовым классом для класса `СompoundButton`. От класса `CompoundButton` в свою очередь, наследуются такие элементы как `CheckBox`, `ToggleButton` и `RadioButton`. В Android для кнопки используется класс `android.widget.Button`. На кнопке располагается текст и на кнопку нужно нажать, чтобы получить результат.
+
+**Инициализация**
+
+В рамках `.xml-layout`'а добавляем след. образом:
+
+```xml
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="99dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView" />
+```
+**Три способа обработать нажатие на кнопку**
+
+### Первый, атрибут - onClick
+
+Добавляем указатель на нашу функцию обработки нажатия на кнопку в атрибуты button:
+```xml
+android:onClick="customOnClick"
+```
+
+В коде добавим функцию:
+```Kotlin
+override fun onClick(v: View?){
+    bExample.setText("1st method")
+}
+```
+
+### Второй, метод - setOnClickListener()
+
+В данном случае можно задать обработку нажатия для конкретной кнопки отдельно:
+```Kotlin
+bExample2.setOnClickListener({
+    bExample2.setText("2nd method")
+})
+```
 
 
+### Третий, интерфейс - OnClickListener()
+
+В этом случае необходимо сначала добавить интерфейс `View.OnClickListener` к текущему классу, затем `override` метод обработки нажатий на кнопки `onClick`:
+
+```Kotlin
+class ViewExamples : AppCompatActivity(), View.OnClickListener {
+
+    override fun onCreate(savedInstanceState: Bundle?) {...}
+
+    override fun onClick(v: View?){
+        bExample3.setText("3dr method")
+    }
+}
+```
+
+Далее, можем указать обработчику на интерфейс текущего класса:
+
+```Kotlin
+bExample3.setOnClickListener(this)
+```
+![alt text](https://github.com/sibsutisTelecomDep/blog/blob/main/book/figures/android/widgets/buttons.PNG?raw=true )
 
 
-
-
-
-
-
-### Button
-
-### 
+## 
