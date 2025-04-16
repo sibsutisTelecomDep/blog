@@ -240,7 +240,7 @@ android:onClick="customOnClick"
 
 В коде добавим функцию:
 ```Kotlin
-override fun onClick(v: View?){
+fun customOnClick(v: View?){
     bExample.setText("1st method")
 }
 ```
