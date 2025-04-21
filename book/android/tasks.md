@@ -33,6 +33,13 @@
 ## 3. Местоположение смартфона. Location.
  Цель: получить доступ к данным о местоположении Android-телефона и вывести на экран значения.
 
- 1. Создать `Activity` **Location** в основном окне `MainActivity`;
- 2. Получить доступ к сервису `Location` при помощи **permissions**: `ACCESS_FINE_LOCATION`, `ACCESS_COARSE_LOCATION`
- 3. Ото
+ 1. Создать `Activity` **Location**, в основном окне `MainActivity` добавить кнопку перехода в новую 'Activity';
+ 2. Получить доступ к классу [Location](https://developer.android.com/reference/android/location/Location) при помощи **permissions**: `ACCESS_FINE_LOCATION`, `ACCESS_COARSE_LOCATION`;
+ 3. Вывести в `Activity` данные о текущем (или последнем известном) местоположении смартфона:
+    - [Latitude](https://developer.android.com/reference/android/location/Location#getLatitude());
+    - [Longitude](https://developer.android.com/reference/android/location/Location#getLongitude());
+    - [Altitude](https://developer.android.com/reference/android/location/Location#getAltitude());
+    - [Current Time](https://developer.android.com/reference/android/location/Location#getTime());
+4. Получить данные можно при помощи метода [getLastLocation()](https://developer.android.com/develop/sensors-and-location/location/retrieve-current)
+5. При каждом обновлении местоположения записывать данные в файл (лучше в формате `Json`);
+6. **ДОП. БАЛЛЫ**. Обернуть получение местоположения смартфона в [сервис](https://developer.android.com/develop/background-work/services) с целью записывать данные о местоположении в `backgroud`-режиме (когда приложение закрыто, `activity` не видно пользователю).
