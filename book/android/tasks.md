@@ -43,3 +43,8 @@
 4. Получить данные можно при помощи метода [getLastLocation()](https://developer.android.com/develop/sensors-and-location/location/retrieve-current)
 5. При каждом обновлении местоположения записывать данные в файл (лучше в формате `Json`);
 6. **ДОП. БАЛЛЫ**. Обернуть получение местоположения смартфона в [сервис](https://developer.android.com/develop/background-work/services) с целью записывать данные о местоположении в `backgroud`-режиме (когда приложение закрыто, `activity` не видно пользователю).
+
+## 4. Данные о сетях мобильной связи (2G, 3G, 4G-LTE, 5G-NR).
+
+1.  Создать новое `Activity`, добавив кнопку перехода основном "окне" `MainActivity`;
+2. 
