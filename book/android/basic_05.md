@@ -233,7 +233,7 @@ tvView_01.setOnClickListener({
 
 ### Первый, атрибут - onClick
 
-Добавляем указатель на нашу функцию обработки нажатия на кнопку в атрибуты button:
+Добавляем указатель на нашу функцию обработки нажатия на кнопку в атрибуты `Button`:
 ```xml
 android:onClick="customOnClick"
 ```
@@ -257,7 +257,7 @@ bExample2.setOnClickListener({
 
 ### Третий, интерфейс - OnClickListener()
 
-В этом случае необходимо сначала добавить интерфейс `View.OnClickListener` к текущему классу, затем `override` метод обработки нажатий на кнопки `onClick`:
+В этом случае необходимо сначала добавить интерфейс `View.OnClickListener` к текущему классу, затем `override` метод обработки нажатий `onClick` для всех кнопок текущего класса `Activity`:
 
 ```Kotlin
 class ViewExamples : AppCompatActivity(), View.OnClickListener {
@@ -278,4 +278,4 @@ bExample3.setOnClickListener(this)
 ![alt text](https://github.com/sibsutisTelecomDep/blog/blob/main/book/figures/android/widgets/buttons.PNG?raw=true )
 
 
-## 
+## SeekBar (Слайдер)
