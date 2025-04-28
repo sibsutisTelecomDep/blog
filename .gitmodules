@@ -1,6 +1,6 @@
 [submodule "android_notes"]
 	path = android_notes
-	url = https://github.com/sibsutisTelecomDep/android_notes
+	url = git@github.com:sibsutisTelecomDep/android_notes.git
 [submodule "sdr_notes"]
 	path = sdr_notes
-	url = https://github.com/sibsutisTelecomDep/sdr_notes
+	url = git@github.com:sibsutisTelecomDep/sdr_notes.git
